@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+        }
+        .number {
+            padding: 10px;
+            font-size: 2em;
+            margin: 8px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .number:hover {
+            transform: scale(1.1);
+        }
+        .fizz {
+            background-color: #a8e063;
+            color: white;
+        }
+        .buzz {
+            background-color: #56ab2f;
+            color: white;
+        }
+        .fizzbuzz {
+            background-color: #a8e063;
+            background: linear-gradient(45deg, #a8e063, #56ab2f);
+            color: white;
+        }
+        .normal {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+         const outputDiv = document.getElementById('output');
+       
+        for(  let i=1;i<=100;i++){
+            let output= '';
+            if(i%3===0) output +='Fizz';
+            if(i%5===0) output+='Buzz';
+        
+        const div=doument.createElement('div');
+         div.classname='number';
+         if(output==='Fizz') div.classList.add('fizz');
+         else if(output==='Buzz') div.classList.add('buzz');
+         else if(output==='FizzBuzz') div.classList.add('fizzbuzz');
+         else div.classList.add('normal');
+
+         div.textcontent=output || i;
+         outputDiv.appendChild(div);
+         }
+
+        
+   // const outputDiv = document.getElementById('output');
+    
+    // for (let i = 1; i <= 100; i++) {
+    //     let output = '';
+    //     if (i % 3 === 0) output += 'Fizz';
+    //     if (i % 5 === 0) output += 'Buzz';
+        
+    //     const div = document.createElement('div');
+    //     div.className = 'number';
+    //     if (output === 'Fizz') div.classList.add('fizz');
+    //     else if (output === 'Buzz') div.classList.add('buzz');
+    //     else if (output === 'FizzBuzz') div.classList.add('fizzbuzz');
+    //     else div.classList.add('normal');
+        
+    //     div.textContent = output || i;
+    //     outputDiv.appendChild(div);
+    // // }
+
+    </script>
+
+</body>
+
+</html>

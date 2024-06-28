@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Palindrome Checker</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+    <div id="result"></div> -->
+
+
+    <input type="number" id="num1" placeholder="Enter 1 number">
+    <input type="number" id="num2" placeholder="Enter 2 number">
+    <button onclick="add()">Add</button>
+    <button onclick="Sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <div id="result"></div>
+
+    
+    
+    <script>
+        // function checkPalindrome() {
+        //     let number = document.getElementById('numberInput').value;
+
+        //     // Convert number to string
+        //     let numStr = number.toString();
+
+        //     // Reverse the string
+        //     let reversedStr = numStr.split('').reverse().join('');
+
+        //     // Check if original number is equal to reversed number
+        //     if (numStr === reversedStr) {
+        //         document.getElementById('result').textContent = `${number} is a palindrome.`;
+        //     } else {
+        //         document.getElementById('result').textContent = `${number} is not a palindrome.`;
+        //     }
+        // }
+
+        function add() 
+        {
+            let num1=parseInt(document.getElementById('num1').value);
+            let num2=parseInt(document.getElementById('num2').value);
+            let result=num1+num2;
+            // document.getElementById('result').textContent='Addtion is: ${result}';
+
+            document.getElementById('result').textContent = `Result of addition: ${result}`;
+
+        }
+
+        function Sub(){
+            let num1=parseint(document.getElementById('num1'.value));
+            let num2=parseint(document.getElementById('num2').value);
+            let result=num1-num2;
+            document.getElementById('result').textContent=`Subtraction: ${result}`;
+        }
+
+        function mul(){
+            let num1=parseInt(document.getElementById('num1').value);
+            let num2=parseInt(document.getElementById('num2').value);
+            let result=num1*num2;
+            document.getElementById('result').textConten=`Multiplication: ${result}`;
+        }
+    </script>
+</body>
+</html>
